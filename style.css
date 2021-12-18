@@ -1,0 +1,172 @@
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    /* border: 1px solid red; */
+
+}
+
+body {
+
+    background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/91dc1964120315.5ac77335ae374.png");
+
+    background-size:100% 100vh;
+
+}
+
+.parent-container {
+
+      background:
+
+radial-gradient(black 15%, transparent 16%) 0 0,
+
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+
+      background-color:#282828;
+
+      background-size:16px 16px;
+
+      width: 330px;
+
+      border-radius: 10px;
+
+      margin: auto;
+
+      margin-top: 20%;
+
+  }
+
+  
+
+  .container {
+
+      width: 100%;
+
+      margin-top: 30px;
+
+      margin-bottom: 30px;
+
+      /* border: 9px double black; */
+
+      border-radius: 20px;
+
+      /* border: 1px solid red; */
+
+      
+
+      box-shadow: 
+
+      0 0 10px 2px rgb(0, 0, 0),
+
+      0 0 25px 3px rgb(25, 25, 112),
+
+      0 0 20px 5px rgb(0, 0, 0);
+
+  }
+
+table {
+
+    width: 50px;
+
+    margin: auto;
+
+    /* border: 1px solid green; */
+
+}
+
+td > input {
+
+    /* border: 3px inset blue; */
+
+    border-radius: 5px;
+
+    padding: 30px;
+
+    width: 72px;
+
+}
+
+#screen1 {
+
+    width: 100%;
+
+    height: 120px;
+
+    padding: 10px;
+
+    color: red;
+
+    font-size: 60px;
+
+    text-align: right;
+
+    overflow-x: scroll;
+
+    /* border: 4px solid blue; */
+
+    border-bottom: none;
+
+    border-top-left-radius: 15px;
+
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 0 ;
+
+    border-bottom-right-radius: 0 ;
+
+}
+
+#screen2 {
+
+    width: 100%;
+
+    height: 0px;
+
+    color: red;
+
+    font-size: 50px;
+
+    text-align: right;
+
+    overflow-x: scroll;
+
+    /* border: 4px solid blue; */
+
+    border-top: none;
+
+    border-bottom: none;
+
+    border-top-left-radius: 0;
+
+    border-top-right-radius: 0;
+
+}
+
+#back {
+
+    width: 100%;
+
+    height: 1%;
+
+    background-image: url("back.svg");
+
+    background-size: 25px;
+
+    background-repeat: no-repeat;
+
+    background-position: right;
+
+    margin-right: 0;
+
+    border-top: none;
+
+}
+
