@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Calculator</title>
+
+</head>
+
+<body>
+
+    <div class="parent-container">
+
+        <div class="container">
+
+            <form action="">
+
+                <table>
+
+                    <tr>
+
+                        <td colspan="4"><input type="text" value="" id="screen1"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="4"><input type="text" value="" id="screen2"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        
+
+                    </tr>
+
+                    <tr>
+
+                       <td><input type="button" value="C" name="bclear" onclick="clean()"></td>
+
+                       <td><input type="button" value="( )" name="bpar" id="" onclick="sym('()','bpar')" /></td>
+
+                       <td><input type="button" value="%" name="bper" id="" onclick="sym('%','bper')" /></td>
+
+                       <td><input type="button" value="÷" name="bdiv" id="" onclick="sym('÷','bdiv')" /></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><input type="button" value="7" name="b7" onclick="num(7,'b7')" /></td>
+
+                        <td><input type="button" value="8" name="b8" onclick="num(8,'b8')" /></td>
+
+                        <td><input type="button" value="9" name="b9" onclick="num(9,'b9')" /></td>
+
+                        <td><input type="button" value="×" name="bmul" id="" onclick="sym('*','bmul')" /></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><input type="button" value="4" name="b4" onclick="num(4,'b4')" /></td>
+
+                        <td><input type="button" value="5" name="b5" onclick="num(5,'b5')" /></td>
+
+                        <td><input type="button" value="6" name="b6" onclick="num(6,'b6')" /></td>
+
+                        <td><input type="button" value="-" name="bmin" id="" onclick="sym('-','bmin')" /></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><input type="button" value="1" name="b1" onclick="num(1,'b1')" /></td>
+
+                        <td><input type="button" value="2" name="b2" onclick="num(2,'b2')" /></td>
+
+                        <td><input type="button" value="3" name="b3" onclick="num(3,'b3')" /></td>
+
+                        <td><input type="button" value="+" name="bpla" id="plus" onclick="sym('+','bpla')" /></td>
+
+                    </tr>
+
+                    <tr>
+
+                      <td><input type="button" value="+/-" name="bpmo" onclick="sym('+/-','bpmo')" />
+
+                      </td>
+
+                      <td><input type="button" value="0" name="b0" onclick="num('0','b0')" />
+
+                      </td>
+
+                      <td><input type="button" value="." name="bdot" onclick="sym('.','bdot')" />
+
+                      </td>
+
+                      <td><input type="button" value="=" name="bresult" id="equal" onclick="result()" /></td>
+
+                    </tr>
+
+                </table>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+  <script type="text/javascript" src="js/index.js" charset="utf-8">
+
+   </script>
+
+</html>
+
