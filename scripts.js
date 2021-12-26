@@ -1,5 +1,6 @@
 var flag = false;
 
+
 function num(getnum, btnum) {
   let number = document.getElementsByName(btnum)[0].value;
   display(number);
@@ -9,32 +10,18 @@ function num(getnum, btnum) {
 function sym(getsym, btsym) {
   let symbol = document.getElementsByName(btsym)[0].value;
   let scdom = document.getElementById('screen1');
+  let lastChar = scdom.value[scdom.value.length-1];
   
-  if (!isNaN(scdom.value[0]) || getsym == "()") { //check if the first char is numeric or not
-    display (symbol);
+  if (!isNaN(scdom.value[0]) || getsym == "()") {
+    if(!isNaN(lastChar) && isNaN(symbol)){
+      display(symbol);
+    }else {
+      scdom.value = replaceLastOperator(scdom.value, lastChar, symbol);
+    }
   }
 }
 
-/*function checkLastOperator(symbol) {
-  var scdom = document.getElementById('screen1');
-  var lastChar = scdom.value[scdom.value.length-1];
-  if(!isNaN(lastChar) || lastChar==null || !isNaN(num)) {
-  scdom.value=scdom.valuem + num;
-  } else if(num!=lastChar) {
-  document.form.textview.value=myString.replace(lastChar,num);
-  }
-}*
-  /
-  // case 1
-  // 8
-  // case 2 
-  // 8+ , 873+
-  // case 3 (btn symbol +, then don't replace)
-  // 8+ 
-  // case 4 (btn symbol -, then replace)
-  // 8+ -> 8-
-  
-/*function replaceLastOperator(x,y,z){
+function replaceLastOperator(x,y,z) {
     const rev = [];
     let rlen = x.length;
     for (let i=0; i<rlen; ++i)
@@ -43,10 +30,7 @@ function sym(getsym, btsym) {
     for (let i=0; i<rlen; ++i)
         rev[i] = x[i];
     return rev.reverse().join("");   
-  }
-*/
-
-
+}
 
 function display(show) {
   document.getElementById('screen1').value += show;
@@ -93,7 +77,7 @@ function roundup(x,rd){
 	 }
 }
 
-function percentage(str){
+function percentage(str) {
     let modInx = str.indexOf('%');
     let count = 0;
     const numLftOfMod = [];
@@ -108,29 +92,29 @@ function percentage(str){
                 ++count;
             }else break;            
         }
+        
         count = 0;
         for(let i=modInx+1; i<=str.length; ++i){
             if(!isNaN(str[i]) || str[i] == "."){
                 numRhtOfMod[count] = str[i];
                 ++count;
             }else break;            
-        }        
+        }
+        
         lnum = numLftOfMod.reverse().join("");
         rnum = numRhtOfMod.join("");
         newStr = lnum+"%"+rnum;
-         
     }else return str;
+    
     str = str.replace(newStr,"("+lnum+"/100"+")"+"*"+rnum);
-    console.log(str);
     
     if(str.indexOf("%") == -1)
       return str;
     else return percentage(str);
 }
-//console.log(eval(percentage(str)).toFixed(4));
 
 // To do
 // Fixing multiple modules issues (done)
 // decimal case (done)
-// bracket case (done)
+// bracket case
 // recursive overrun fixed (done)
