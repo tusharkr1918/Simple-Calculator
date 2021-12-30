@@ -1,10 +1,6 @@
-var flag = false;
-
-
 function num(getnum, btnum) {
   let number = document.getElementsByName(btnum)[0].value;
   display(number);
-  flag = false;
 }
 
 function sym(getsym, btsym) {
@@ -12,8 +8,8 @@ function sym(getsym, btsym) {
   let scdom = document.getElementById('screen1');
   let lastChar = scdom.value[scdom.value.length-1];
   
-  if (!isNaN(scdom.value[0]) || getsym == "()") {
-    if(!isNaN(lastChar) && isNaN(symbol)){
+  if (!isNaN(scdom.value[0]) || getsym == "()" || scdom.value[0] == "-") {
+    if((!isNaN(lastChar) && isNaN(symbol))){
       display(symbol);
     }else {
       scdom.value = replaceLastOperator(scdom.value, lastChar, symbol);
@@ -116,5 +112,5 @@ function percentage(str) {
 // To do
 // Fixing multiple modules issues (done)
 // decimal case (done)
-// bracket case
+// bracket case (done)
 // recursive overrun fixed (done)
